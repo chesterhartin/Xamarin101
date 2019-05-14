@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin101.Pages.AbsoluteLayoutPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="BoxView">
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Rotation" Value="25" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <!-- Elements are positioned or sized relative to the layout-->
+            <!-- 
+            Absolute Layout Flags:
+            * None - all values are absolute. This is the default
+            * All – interprets all values as proportional.
+            * WidthProportional – interprets the Width value as proportional and all other values as absolute. 
+            * HeightProportional – interprets only the height value as proportional with all other values absolute.
+            * XProportional – interprets the X value as proportional, while treating all other values as absolute.
+            * YProportional – interprets the Y value as proportional, while treating all other values as absolute.
+            * PositionProportional – interprets the X and Y values as proportional, while the size values are interpreted as absolute.
+            * SizeProportional – interprets the Width and Height values as proportional while the position values are absolute.
+            -->
+            <!-- Layout Bounds rect: x, y, width, height-->
+            <BoxView AbsoluteLayout.LayoutBounds="0, .5 , 50, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Color="Green"/>
+            <BoxView AbsoluteLayout.LayoutBounds="1, .5, 50, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Color="Orange" />
+            <BoxView AbsoluteLayout.LayoutBounds=".5, 0, 0.40, 0.10" AbsoluteLayout.LayoutFlags="PositionProportional, SizeProportional" Color="Blue" />
+            <BoxView AbsoluteLayout.LayoutBounds=".5, .5, 100, 50" AbsoluteLayout.LayoutFlags="PositionProportional" Color="Red" />
+            <Label AbsoluteLayout.LayoutBounds=".5, 1, .50, .08" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Yellow" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" Text="Bottom Center" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

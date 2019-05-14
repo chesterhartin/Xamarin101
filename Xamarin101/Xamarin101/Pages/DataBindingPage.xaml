@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin101.Pages.DataBindingPage" xmlns:converter="clr-namespace:Xamarin101.Converters">
+        <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:DateTimeToColorConverter x:Key="dateTimeToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+           <StackLayout VerticalOptions="Center">
+            <Frame BackgroundColor="{Binding FrameColor}" Padding="0, 20, 0, 20">
+                <Label x:Name="welcomeLabel"
+                       HeightRequest="50"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{Binding IsItSaturday, Converter={StaticResource dateTimeToColorConverter}}"
+                       Text="{Binding LabelText}"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+            <Switch Margin="0, 50, 0, 0"
+                    HorizontalOptions="Center"
+                    IsToggled="{Binding IsSwitchOn}" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

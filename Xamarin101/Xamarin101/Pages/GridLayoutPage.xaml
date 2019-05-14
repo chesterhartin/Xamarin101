@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin101.Pages.GridLayoutPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Define styles here -->
+            <!-- Implicit Style: applies to every View of this type -->
+            <Style TargetType="Label">
+               <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+            <!-- Explicit Style: applied selectively by setting the Style property -->
+            <Style x:Key="LabelStyle1" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="45" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowSpacing="10" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!-- First Row -->
+            <Label Grid.Row="0" Grid.Column="0" BackgroundColor="LightBlue" Text="Top Left" />
+            <Label Grid.Row="0" Grid.Column="1" BackgroundColor="CornflowerBlue" Text="Top Right" />
+            <!-- Second Row -->
+            <Label Grid.Row="1" Grid.Column="0" BackgroundColor="LightGreen" Text="Middle Row" Grid.ColumnSpan="2" />
+            <!-- Third Row -->
+            <Label Grid.Row="2" Grid.Column="0" BackgroundColor="LightGoldenrodYellow" Text="Bottom Left" />
+            <Label Grid.Row="2" Grid.Column="1" BackgroundColor="Yellow" Text="Bottom Right" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
