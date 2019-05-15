@@ -26,7 +26,7 @@ namespace Xamarin101.Pages
                 IsSwitchOn = true
             };
 
-            //// Have to set the BindingContext of the Page
+            // Have to set the BindingContext of the Page
             this.BindingContext = viewModel;
 
             #endregion NEW WAY

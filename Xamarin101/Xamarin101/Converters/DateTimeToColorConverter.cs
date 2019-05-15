@@ -18,7 +18,7 @@ namespace Xamarin101.Converters
             var theDate = (DateTime)value;
 
             // Code to convert from one type to another
-            if (theDate.DayOfWeek == DayOfWeek.Sunday)
+            if (theDate.DayOfWeek == DayOfWeek.Saturday)
             {
                 return Color.Red;
             }

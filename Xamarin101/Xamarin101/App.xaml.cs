@@ -12,23 +12,23 @@ namespace Xamarin101
             InitializeComponent();
 
             //#1
-            //MainPage = new HelloWorld();
+            MainPage = new HelloWorld();
 
             // #2
-            // Basic controlls
-            // MainPage = new MainPage();
+            // Basic controls
+            //MainPage = new MainPage();
 
             // #3 page styles
-           // MainPage = new AbsoluteLayoutPage();
+            //MainPage = new AbsoluteLayoutPage();
             //MainPage = new GridLayoutPage();
 
             // #4
-            //MainPage = new DataBindingPage();
+           // MainPage = new DataBindingPage();
 
             // #5
             //MainPage = new PlatformSpecificsPage();
             //MainPage = new BehaviorsPage();
-            MainPage = new EffectsPage();
+            //MainPage = new EffectsPage();
 
         }
 
